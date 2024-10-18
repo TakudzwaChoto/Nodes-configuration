@@ -36,12 +36,12 @@ Before setting up the Hyperledger Fabric network for the Water Quality Managemen
    ### 6. **Python (optional)**  
    Required if you plan to interact with the network using Python SDK.
    - [Python Download](https://www.python.org/downloads/)
-
-### 7. **Git**  
+    ```
+ 5. **Git**  
    Required for version control and cloning the project repository.
    - [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-### 8. **jq (optional)**  
+6. **jq (optional)**  
    A lightweight command-line JSON processor for handling chaincode interactions.
    - [jq Installation Guide](https://stedolan.github.io/jq/download/)
 
@@ -57,37 +57,7 @@ Before setting up the Hyperledger Fabric network for the Water Quality Managemen
 
 ## CSS Styling (optional)
 
-If you need to apply any custom styling for your web UI, you can include custom CSS in the **`client-ui`** folder.
 
-Example:
-
-```css
-/* Custom styles for the Water Quality Management Client UI */
-
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  color: #2b5797;
-  text-align: center;
-}
-
-.button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #45a049;
-}
-
-```
 
 ## Water-quality-management-network-setup
 
