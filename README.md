@@ -54,11 +54,6 @@ Before setting up the Hyperledger Fabric network for the Water Quality Managemen
 - **Disk Space**: At least 50GB of free space
 
 ---
-
-## CSS Styling (optional)
-
-
-
 ## Water-quality-management-network-setup
 
  The network is built using the `fabric-samples` repository, with the following key files contributing to the setup and operation of the Fabric network.
@@ -98,7 +93,7 @@ configtxgen -profile <ProfileName> -channelID system-channel -outputBlock ./chan
 # Generate the Channel Creation Transaction
 configtxgen -profile <ProfileName> -outputCreateChannelTx ./channel-artifacts/mychannel.tx -channelID mychannel
 ```
-## You can also use Docker Compose to bring up the Hyperledger Fabric network, including peers, orderers, and the Certificate Authority (CA).
+### You can also use Docker Compose to bring up the Hyperledger Fabric network, including peers, orderers, and the Certificate Authority (CA).
  ### Navigate to the network directory
 
 ```bash
