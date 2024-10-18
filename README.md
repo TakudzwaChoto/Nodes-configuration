@@ -139,20 +139,20 @@ Query the chaincode to retrieve water quality data.
 ```bash
 peer chaincode query -C mychannel -n water-quality -c '{"Args":["queryWaterQuality","river1"]}'
 ```
-##Running the Application
-###Start the Backend (helia-server):
+## Running the Application
+### Start the Backend (helia-server):
 ```bash
 cd helia-server
 npm install
 npm start
 ```
-###Start the Frontend (client-ui)
+### Start the Frontend (client-ui)
 ```bash
 cd client-ui
 npm install
 npm start
 ```
-###Start the API Server (server-api)
+### Start the API Server (server-api)
 ```bash
 cd server-api
 npm install
