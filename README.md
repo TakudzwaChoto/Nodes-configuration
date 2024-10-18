@@ -1,4 +1,4 @@
-# Water Quality Management - Hyperledger Fabric Network
+## Water Quality Management 
 
 This project implements a **Water Quality Management System** using Hyperledger Fabric to ensure secure and decentralized and private data sharing. The project structure includes the following key components:
 
