@@ -51,50 +51,48 @@ configtxgen -profile <ProfileName> -channelID system-channel -outputBlock ./chan
 # Generate the Channel Creation Transaction
 configtxgen -profile <ProfileName> -outputCreateChannelTx ./channel-artifacts/mychannel.tx -channelID mychannel
 ```
-You can Use Docker Compose to bring up the Hyperledger Fabric network, including peers, orderers, and the Certificate Authority (CA).
-
-Copy code
+You can also use Docker Compose to bring up the Hyperledger Fabric network, including peers, orderers, and the Certificate Authority (CA).
 # Navigate to the network directory
 
 ```bash
 cd network
 ```
 
-# Start the network
+## Start the network
 
 ```bash
 docker-compose -f docker-compose.yaml up -d
 ```
 Once the network is up, create a channel and have peers join the channel
-# From the CLI container, create the channel
+## From the CLI container, create the channel
 
 ```bash
 peer channel create -o orderer.example.com:7050 -c mychannel -f ./channel-artifacts/mychannel.tx
 ```
-# Join peer to the channel
+## Join peer to the channel
 
 ```bash
 peer channel join -b mychannel.block
 ```
 Install the chaincode (smart contract) on all peers and instantiate it on the channel.
-# Install chaincode on Peer0
+## Install chaincode on Peer0
 
 ```bash
 peer chaincode install -n water-quality -v 1.0 -p github.com/chaincode/water_quality
 ```
-# Instantiate the chaincode on the channel
+## Instantiate the chaincode on the channel
 
 ```bash
 peer chaincode instantiate -o orderer.example.com:7050 -C mychannel -n water-quality -v 1.0 -c '{"Args":["init"]}'
 ```
 Invoke the chaincode to execute a transaction on the channel (e.g., updating water quality data)
-# Invoke the chaincode function
+## Invoke the chaincode function
 
 ```bash
 peer chaincode invoke -o orderer.example.com:7050 -C mychannel -n water-quality -c '{"Args":["updateWaterQuality","river1","75"]}'
 ```
 Query the chaincode to retrieve water quality data.
-# Query the water quality data for river1
+## Query the water quality data for river1
 
 ```bash
 peer chaincode query -C mychannel -n water-quality -c '{"Args":["queryWaterQuality","river1"]}'
