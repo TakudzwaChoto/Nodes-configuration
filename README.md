@@ -12,7 +12,7 @@ This project implements a **Water Quality Management System** using Hyperledger 
 ├── server-api        # API for handling client-server communication
 ```
 
-# Water Quality Management - Hyperledger Fabric Network
+# Water-quality-management-network-setup
 
  The network is built using the `fabric-samples` repository, with the following key files contributing to the setup and operation of the Fabric network.
 
