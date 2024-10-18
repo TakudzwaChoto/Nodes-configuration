@@ -33,7 +33,7 @@ Before setting up the Hyperledger Fabric network for the Water Quality Managemen
    Download the Hyperledger Fabric binaries and Docker images using the `fabric-samples` repository.
    ```bash
    curl -sSL https://bit.ly/2ysbOFE | bash -s
-   ### 6. **Python (optional)**  
+   Python (optional) 
    Required if you plan to interact with the network using Python SDK.
    - [Python Download](https://www.python.org/downloads/)
     ```
@@ -144,7 +144,25 @@ Query the chaincode to retrieve water quality data.
 ```bash
 peer chaincode query -C mychannel -n water-quality -c '{"Args":["queryWaterQuality","river1"]}'
 ```
-
+##Running the Application
+###Start the Backend (helia-server):
+```bash
+cd helia-server
+npm install
+npm start
+```
+###Start the Frontend (client-ui)
+```bash
+cd client-ui
+npm install
+npm start
+```
+###Start the API Server (server-api)
+```bash
+cd server-api
+npm install
+npm start
+```
 
 
 
