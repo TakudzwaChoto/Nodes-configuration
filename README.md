@@ -12,6 +12,29 @@ This project implements a **Water Quality Management System** using Hyperledger 
 ├── server-api        # API for handling client-server communication
 ```
 
+### Prerequisites
+
+Before setting up the Hyperledger Fabric network for the Water Quality Management System, ensure you have the following prerequisites installed:
+
+1. **Docker & Docker Compose**  
+   Install Docker and Docker Compose to run Hyperledger Fabric components in containers.
+   - [Docker Installation Guide](https://docs.docker.com/get-docker/)
+   - [Docker Compose Installation](https://docs.docker.com/compose/install/)
+
+2. **Node.js & npm**  
+   Required for running the API server and client UI.
+   - [Node.js Download](https://nodejs.org/en/download/)
+
+3. **Go Language**  
+   Required for compiling and running chaincode.
+   - [Go Installation Guide](https://golang.org/doc/install)
+
+4. **Hyperledger Fabric Binaries and Docker Images**  
+   Download the Hyperledger Fabric binaries and Docker images using the `fabric-samples` repository.
+   ```bash
+   curl -sSL https://bit.ly/2ysbOFE | bash -s
+
+
 ## Water-quality-management-network-setup
 
  The network is built using the `fabric-samples` repository, with the following key files contributing to the setup and operation of the Fabric network.
